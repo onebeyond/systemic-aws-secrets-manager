@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  localstack:
+    image: localstack/localstack:0.12.16
+    container_name: 'aws'
+    ports:
+      - '4566:4566'
+    environment:
+      - SERVICES=sm
+      - DEFAULT_REGION=us-east-1
