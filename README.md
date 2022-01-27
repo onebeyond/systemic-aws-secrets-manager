@@ -1,6 +1,6 @@
 # Systemic AWS S3
 
-A [Systemic](https://guidesmiths.github.io/systemic/#/) component for the [AWS S3 SDK v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html).
+A [Systemic](https://guidesmiths.github.io/systemic/#/) component for the [AWS SecretsManager SDK v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html).
 
 ## How to use it
 
@@ -18,15 +18,15 @@ A typical, simple configuration looks like this:
 }
 ```
 
-[Here](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-s3/interfaces/s3clientconfig.html) you can finde the complete configuration interface of S3Client class constructor that set the region, credentials and other options.
+[Here](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-secrets-manager/classes/secretsmanager.html) you can find the complete configuration interface of SecretsmManager class constructor that set the region, credentials and other options.
 
 ### Initialize the component
 
 As with any other [Systemic component](https://guidesmiths.github.io/systemic/#/?id=components), you can run it with the `start` method:
 
 ```js
-const initAWSS3 = require('systemic-aws-s3');
-const { start } = initAWSS3();
+const initAWSSecretsManager = require('systemic-aws-secrets-manager');
+const { start } = initAWSSecretsManager();
 
 const api = await start({ config }); // configuration similar to the one above
 ```
@@ -38,14 +38,14 @@ As the AWS API has dozens of commands, intead of having one wrapper for each of 
 For example, to list all the objects in a specific bucket:
 
 ```js
-const listObjectConfig = {
-  commandParams: { Bucket: bucketName },
-  commandName: 'listObjects'
+const getSecretValueConfig = {
+  commandParams: { SecretId: secretId },
+  commandName: 'getSecretValue'
 }
-const res = await api.commandExecutor(listObjectConfig);
+const res = await api.commandExecutor(getSecretValueConfig);
 ```
 
-You can check all the available commands [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-s3/classes/s3.html).
+You can check all the available commands [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-secrets-manager/classes/secretsmanager.html).
 
 ### Custom commands
 
