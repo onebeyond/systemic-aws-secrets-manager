@@ -1,4 +1,4 @@
-# Systemic AWS S3
+# Systemic AWS secrets manager
 
 A [Systemic](https://guidesmiths.github.io/systemic/#/) component for the [AWS SecretsManager SDK v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html).
 
