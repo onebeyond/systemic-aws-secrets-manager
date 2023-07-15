@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/86ff1ad4ab2cdb73669c/maintainability)](https://codeclimate.com/github/onebeyond/systemic-aws-secrets-manager/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/86ff1ad4ab2cdb73669c/test_coverage)](https://codeclimate.com/github/onebeyond/systemic-aws-secrets-manager/test_coverage)
+
 # Systemic AWS S3
 
 A [Systemic](https://guidesmiths.github.io/systemic/#/) component for the [AWS SecretsManager SDK v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html).
